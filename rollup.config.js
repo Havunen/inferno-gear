@@ -1,9 +1,14 @@
 import babel from 'rollup-plugin-babel';
 import npm from 'rollup-plugin-npm';
 
+const replace = require('rollup-plugin-replace');
+
+process.env.NODE_ENV = 'production';
+
+
 export default {
     entry: 'lib/index.js',
-    sourceMap: true,
+    sourceMap: false,
     plugins: [
         babel(),
         npm({
@@ -31,6 +36,9 @@ export default {
             // for the browser. If that's you, use this option, otherwise
             // pkg.browser will be ignored
             browser: true
+        }),
+        replace({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         })
     ]
 };
