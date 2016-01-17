@@ -35,7 +35,7 @@ h1 > span {
 }
 
 .site-logo {
-    height: 135px;
+    height: auto;
     max-width: 100%;
 }
 
