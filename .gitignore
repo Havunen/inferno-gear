@@ -101,5 +101,5 @@ Thumbs.db
 build
 dist
 node_modules
-site/bundle.js
-site/bundle.js.map
+site/build/bundle.js
+site/build/bundle.js.map

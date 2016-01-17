@@ -31,7 +31,8 @@
   },
   "homepage": "https://github.com/Havunen/inferno-gear#readme",
   "dependencies": {
-    "inferno-src": "https://github.com/trueadm/inferno.git#dev"
+    "inferno-component": "^0.5.13",
+    "inferno-src": "https://github.com/Havunen/inferno.git"
   },
   "devDependencies": {
     "babel-eslint": "^5.0.0-beta6",

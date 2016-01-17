@@ -1,9 +1,6 @@
-import Inferno from 'inferno';
-window.Inferno = Inferno;
-import InfernoDOM from 'inferno-dom';
-window.InfernoDOM = InfernoDOM;
+import {Inferno, InfernoDOM} from './../lib/infernowrapper';
+import {Header} from './views/header';
+import {Page} from './views/page';
 
-import {InfernoInput} from './../lib/index';
-
-
-InfernoDOM.render(<InfernoInput />, document.getElementById('site'));
+InfernoDOM.render(<Header />, document.getElementById('header'));
+InfernoDOM.render(<Page />, document.getElementById('content'));

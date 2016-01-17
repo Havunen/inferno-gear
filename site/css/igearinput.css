@@ -1,0 +1,18 @@
+.igear-input {
+    display: inline-block;
+    position: relative;
+}
+
+.igear-input-field {
+    line-height: 1.5rem;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.igear-input-label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 1.5rem;
+}
