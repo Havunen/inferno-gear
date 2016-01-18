@@ -1,5 +1,6 @@
 import babel from 'rollup-plugin-babel';
 import npm from 'rollup-plugin-npm';
+import commonjs from 'rollup-plugin-commonjs';
 
 const replace = require('rollup-plugin-replace');
 
@@ -36,6 +37,13 @@ export default {
             // for the browser. If that's you, use this option, otherwise
             // pkg.browser will be ignored
             browser: true
+        }),
+        commonjs({
+            include: 'node_modules/highlight.js/**',
+
+            // search for files other than .js files (must already
+            // be transpiled by a previous plugin!)
+            extensions: [ '.js', '.coffee' ] // defaults to [ '.js' ]
         }),
         replace({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
