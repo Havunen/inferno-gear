@@ -4,7 +4,12 @@
     position: relative;
     margin: 1rem .5rem;
 }
-
+.edit.igear-input {
+    color: #337ab7;
+}
+.error.igear-input {
+    color: #C72828;
+}
 .igear-input-field {
     line-height: 1.5rem;
     margin: 0;
@@ -15,6 +20,8 @@
     outline: none;
     padding: .15rem .15rem .15rem 0;
     background: inherit;
+    color: #282828;
+    min-width: 10rem;
 }
 
 .igear-input-label {
@@ -36,10 +43,9 @@
 }
 
 .edit > .igear-input-label {
-    color: #337ab7;
     transition-timing-function: ease;
     transition-duration: .2s;
-    transition-property: color, top, font-size;
+    transition-property: top, font-size;
 }
 
 .igear-input-underline 	{
@@ -62,6 +68,12 @@
     transition-duration: .2s;
     transition-property: width;
 }
+.error > .igear-input-underline:before,
+.error > .igear-input-underline:after {
+    transition: none;
+    background: #C72828;
+    width: 50%;
+}
 .igear-input-underline:before {
     left:50%;
 }
@@ -81,6 +93,37 @@
     background: #ccc;
 }
 
+
+.igear-charcounter {
+    font-size: .75rem;
+    text-align: right;
+}
+
+
+/* Place holder colors */
+.igear-input-field::-webkit-input-placeholder { /* Safari, Chrome and Opera */
+    color: #282828;
+}
+
+.igear-input-field::-moz-placeholder { /* Firefox 19+ */
+    color: #282828;
+}
+
+.igear-input-field:-ms-input-placeholder { /* IE 10+ */
+    color: #282828;
+}
+
+.igear-input-field::-ms-input-placeholder { /* Edge */
+    color: #282828;
+}
+
+.igear-input-field:placeholder-shown { /* Standard one last! */
+    color: #282828;
+}
+
+.igear-errormsg {
+    font-size: .75rem;
+}
 
 @keyframes inputHighlighter {
     from { background:#5264AE; }

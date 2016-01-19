@@ -1,6 +1,7 @@
 html {
     box-sizing: border-box;
     background-color: #f8f8f8;
+    font-family: 'PT Sans', sans-serif;
 }
 
 *, *:after, *:before {
@@ -19,6 +20,40 @@ body {
     counter-reset: number;
 }
 
+/*
+ * Fork banner
+ */
+
+.fork {
+    display: none;
+    background-color: #32709D;
+    position: fixed;
+    right: -50px;
+    top: 50px;
+    color: #fff;
+    padding: .3em 3em;
+    text-decoration: none;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.fork:hover {
+    background-color: #5da5d8;
+    color: #fff;
+}
+.fork:active {
+    background-color: #1e71ab;
+    color: #fff;
+}
+@media (min-width: 42em) {
+    .fork {
+        display: inline;
+    }
+}
+
+
 pre {
     margin: 0;
 }
@@ -29,6 +64,8 @@ pre {
     justify-content: center;
     text-align: center;
     width: 100%;
+    max-width: 85rem;
+    margin: 0 auto;
 }
 
 #content {
@@ -95,6 +132,7 @@ h2.separator > .h2text {
     display: block;
     width: 100%;
     margin-bottom: 2rem;
+    font-weight: bold;
 }
 
 .example {
@@ -102,7 +140,7 @@ h2.separator > .h2text {
     border: 1px solid gainsboro;
     display: block;
     border-bottom: 0;
-    padding: 3rem 1.5rem 2rem 1rem;
+    padding: 3rem 1rem 2rem 1rem;
     position: relative;
 }
 
@@ -112,7 +150,7 @@ code.hljs {
     width: 100%;
     overflow-x: auto;
     position: relative;
-    padding: 3rem 1.5rem 2rem 1rem;
+    padding: 3rem 1rem 2rem 1rem;
 }
 
 code.hljs > .hljs-tag:after {
