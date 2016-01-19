@@ -12,20 +12,18 @@ export class Page extends Component {
             <div>
                 <h2 class="separator"><span class="h2text">Editable input</span></h2>
                 <div class="code-example">
-                    <span class="description">Basic text input</span>
-                    <IGearInput value="" label="text input" />
-                    <pre>
-                        <code>
-                            <IGearInput value="" label="text input" />
-                        </code>
-                    </pre>
-                </div>
-
-                <div class="code-example">
-                    <span class="description">Basic text input with value</span>
-                    <IGearInput value="Sampo Kivistö" label="Author" />
-                    <CodeBlock className="JavaScript">
-                        Test
+                    <span class="description">Input can have different types, and be disabled.</span>
+                    <div class="example">
+                        <IGearInput value="" label="text input"/>
+                        <IGearInput value="Sampo Kivistö" label="Author"/>
+                        <IGearInput type="password" value="" label="password input"/>
+                        <IGearInput label="disabled input" disabled={true} />
+                    </div>
+                    <CodeBlock className="xml">
+                        &lt;IGearInput value=&quot;&quot; label=&quot;text input&quot;/&gt;
+                        &lt;IGearInput value=&quot;Sampo Kivist&#246;&quot; label=&quot;Author&quot;/&gt;
+                        &lt;IGearInput type=&quot;password&quot; value=&quot;&quot; label=&quot;password input&quot;/&gt;
+                        &lt;IGearInput label=&quot;disabled input&quot; disabled /&gt;
                     </CodeBlock>
                 </div>
             </div>

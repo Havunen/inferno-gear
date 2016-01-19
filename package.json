@@ -31,11 +31,11 @@
   },
   "homepage": "https://github.com/Havunen/inferno-gear#readme",
   "dependencies": {
-    "inferno-src": "https://github.com/trueadm/inferno.git#dev"
+    "inferno-src": "https://github.com/trueadm/inferno.git"
   },
   "devDependencies": {
     "babel-eslint": "^5.0.0-beta6",
-    "babel-plugin-inferno": "^0.2.9",
+    "babel-plugin-inferno": "^0.2.10",
     "babel-plugin-syntax-jsx": "^6.3.13",
     "babel-plugin-syntax-object-rest-spread": "^6.3.13",
     "babel-plugin-transform-object-rest-spread": "^6.3.13",
@@ -47,7 +47,7 @@
     "rollup-plugin-babel": "^2.3.9",
     "rollup-plugin-commonjs": "^2.2.0",
     "rollup-plugin-multi-entry": "^1.1.0",
-    "rollup-plugin-npm": "^1.2.1",
+    "rollup-plugin-npm": "^1.3.0",
     "rollup-plugin-replace": "^1.1.0"
   }
 }

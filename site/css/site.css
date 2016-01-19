@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    background-color: #f8f8f8;
 }
 
 *, *:after, *:before {
@@ -15,6 +16,11 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     color: #282828;
+    counter-reset: number;
+}
+
+pre {
+    margin: 0;
 }
 
 #header {
@@ -26,8 +32,10 @@ body {
 }
 
 #content {
-    width: 60rem;
+    width: 100%;
     margin: 0 auto;
+    max-width: 60rem;
+    padding: 2rem;
 }
 
 h1 {
@@ -76,9 +84,57 @@ h2.separator {
 }
 
 h2.separator > .h2text {
-    background: #fff;
+    background: #f8f8f8;
     display: inline-block;
     position: absolute;
     width: 15rem;
     margin: -1rem -7.5rem;
+}
+
+.description {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.example {
+    width: 100%;
+    border: 1px solid gainsboro;
+    display: block;
+    border-bottom: 0;
+    padding: 3rem 1.5rem 2rem 1rem;
+    position: relative;
+}
+
+code.hljs {
+    background: #FFF3C7;
+    border: 1px solid gainsboro;
+    width: 100%;
+    overflow-x: auto;
+    position: relative;
+    padding: 3rem 1.5rem 2rem 1rem;
+}
+
+code.hljs > .hljs-tag:after {
+    content: "\A";
+    white-space: pre;
+}
+
+.example:before,
+code:before {
+    content: "Code block " counter(number) "";
+    position: absolute;
+    left: .25rem;
+    top: .25rem;
+    font-size: .75rem;
+    color: #777;
+}
+
+.example:before {
+    counter-increment: number;
+    content: "Example " counter(number) "";
+}
+
+.code-example {
+    margin: 3rem 0;
 }

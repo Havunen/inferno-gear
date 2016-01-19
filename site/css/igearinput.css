@@ -1,32 +1,34 @@
 .igear-input {
     display: inline-block;
+    max-width: 100%;
     position: relative;
+    margin: 1rem .5rem;
 }
 
 .igear-input-field {
     line-height: 1.5rem;
     margin: 0;
     border: none;
-    display:block;
-    border:none;
-    outline:none;
-    border-bottom:1px solid #757575;
-    padding: .25rem;
+    display: block;
+    max-width: 100%;
+    border: none;
+    outline: none;
+    padding: .15rem .15rem .15rem 0;
+    background: inherit;
 }
 
 .igear-input-label {
     position: absolute;
-    left: .25rem;
+    left: 0;
     top: 4px;
     line-height: 1.5rem;
     font-size: 1rem;
-    transition: 0.2s ease all;
+
     pointer-events: none;
     -webkit-user-select: none;
     user-select: none;
 }
 
-/* active state */
 .float.igear-input-label,
 .edit > .igear-input-label {
     top:-1.1rem;
@@ -35,12 +37,17 @@
 
 .edit > .igear-input-label {
     color: #337ab7;
+    transition-timing-function: ease;
+    transition-duration: .2s;
+    transition-property: color, top, font-size;
 }
 
 .igear-input-underline 	{
-    position:relative;
-    display:block;
-    width:100%;
+    position: absolute;
+    display: block;
+    width: 100%;
+    background: #757575;
+    height: 1px;
 }
 
 .igear-input-underline:before,
@@ -48,12 +55,12 @@
     content:'';
     height:2px;
     width:0;
-    bottom:1px;
+    bottom:0;
     position:absolute;
     background:#337ab7;
-    transition:0.2s ease all;
-    -moz-transition:0.2s ease all;
-    -webkit-transition:0.2s ease all;
+    transition-timing-function: ease;
+    transition-duration: .2s;
+    transition-property: width;
 }
 .igear-input-underline:before {
     left:50%;
@@ -62,12 +69,17 @@
     right:50%;
 }
 
-/* active state */
 .edit > .igear-input-underline:before,
 .edit > .igear-input-underline:after {
     width:50%;
 }
 
+.disabled > .igear-input-label {
+    color: #ccc;
+}
+.disabled > .igear-input-underline {
+    background: #ccc;
+}
 
 
 @keyframes inputHighlighter {

@@ -16,13 +16,13 @@ export class CodeBlock extends Component {
     }
 
     highlightCode() {
-        //hljs.highlightBlock(this._codeBlock.element);
+        hljs.highlightBlock(this._codeBlock.element);
     }
 
     render() {
         return (
             <pre>
-                <code className={this.props.className}>{childrenTemplate(this.props.children)}</code>
+                <code ref={this._codeBlock} className={this.props.className}>{this.props.children}</code>
             </pre>
         );
     }
