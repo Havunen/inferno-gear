@@ -1,4 +1,5 @@
 import {Inferno, Component} from './../../lib/infernowrapper';
+import packageJSON from './../../package.json';
 
 export class Header extends Component {
     constructor(props) {
@@ -18,7 +19,7 @@ export class Header extends Component {
 
                 Special thanks for <a href="https://github.com/trueadm">@trueadm</a>, <a href="https://github.com/kflash">@kflash</a>, <a href="https://github.com/kuraga">@kuraga</a>, <a href="https://github.com/tejacques">@tejacques</a> and rest of <a href="https://github.com/trueadm/inferno/graphs/contributors">InfernoJS contributors</a> who has made this library possible!</p>
                 <h3>
-                    <span class="links note">V1.0.0</span>
+                    <span class="links note">v{packageJSON.version}</span>
                     -
                     <a href="https://github.com/Havunen/inferno-gear" class="links">View Github Project</a>
                     -

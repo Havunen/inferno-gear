@@ -1,6 +1,7 @@
 import babel from 'rollup-plugin-babel';
 import npm from 'rollup-plugin-npm';
 import commonjs from 'rollup-plugin-commonjs';
+import json from 'rollup-plugin-json';
 
 const replace = require('rollup-plugin-replace');
 
@@ -11,6 +12,7 @@ export default {
     entry: 'lib/index.js',
     sourceMap: false,
     plugins: [
+        json(),
         babel(),
         npm({
             // use "jsnext:main" if possible
