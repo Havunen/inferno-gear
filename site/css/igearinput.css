@@ -4,9 +4,6 @@
     position: relative;
     margin: 1rem .5rem;
 }
-.edit.igear-input {
-    color: #337ab7;
-}
 .error.igear-input {
     color: #C72828;
 }
@@ -43,9 +40,13 @@
 }
 
 .edit > .igear-input-label {
+    color: #337ab7;
     transition-timing-function: ease;
     transition-duration: .2s;
     transition-property: top, font-size;
+}
+.error > .igear-input-label {
+    color: #C72828;
 }
 
 .igear-input-underline 	{

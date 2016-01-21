@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^5.0.0-beta6",
-    "babel-plugin-inferno": "^0.2.10",
+    "babel-plugin-inferno": "^0.2.11",
     "babel-plugin-syntax-jsx": "^6.3.13",
     "babel-plugin-syntax-object-rest-spread": "^6.3.13",
     "babel-plugin-transform-object-rest-spread": "^6.3.13",
