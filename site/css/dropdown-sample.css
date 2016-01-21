@@ -1,0 +1,21 @@
+.sample {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: .25rem;
+    cursor: pointer;
+    background: blue;
+    width: 100%;
+}
+
+.igear-dditem > .sample {
+    width: 100%;
+    box-shadow: 0 1px 1px #000;
+}
+
+.igear-dditem > .sample:hover {
+    background: red;
+}
+
+.igear-selected > .sample {
+    text-decoration: underline;
+}
