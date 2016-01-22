@@ -3,7 +3,7 @@ import {Header} from './views/header';
 import {Page} from './views/page';
 
 InfernoDOM.render(<Header />, document.getElementById('header'));
-InfernoDOM.render(<Page />, document.getElementById('content'))
+InfernoDOM.render(<Page />, document.getElementById('content'));
 
 //class Test extends Component {
 //    constructor(props) {
