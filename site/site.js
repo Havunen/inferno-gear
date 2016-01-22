@@ -16,3 +16,8 @@ InfernoDOM.render(<Page />, document.getElementById('content'))
 //}
 //
 //InfernoDOM.render(<Test />, document.body);
+
+
+
+
+

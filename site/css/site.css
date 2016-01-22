@@ -176,3 +176,11 @@ code:before {
 .code-example {
     margin: 3rem 0;
 }
+
+
+pre.log {
+    width: 100%;
+    display: block;
+    background: #E2E2E2;
+    margin: 1rem 0;
+}

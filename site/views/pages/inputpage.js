@@ -1,10 +1,24 @@
-import {Inferno, Component} from './../../../lib/infernowrapper'
+import {Inferno, Component, InfernoDOM} from './../../../lib/infernowrapper'
 import {IGearInput} from './../../../lib/index';
 import {CodeBlock} from './../components/codeblock';
 
 export class InputPage extends Component {
     constructor(props) {
         super(props);
+
+        this._demoChange = InfernoDOM.createRef();
+        this._demoKeyup = InfernoDOM.createRef();
+
+        this.onInputChange = this.onInputChange.bind(this);
+        this.onKeyUp = this.onKeyUp.bind(this);
+    }
+
+    onInputChange(event, value) {
+        this._demoChange.element.innerHTML += '\n Change value(' + value + ')';
+    }
+
+    onKeyUp(event, value) {
+        this._demoKeyup.element.innerHTML += '\n Keyup btn(' + event.which + ') value (' + value + ')';
     }
 
     render() {
@@ -23,7 +37,7 @@ export class InputPage extends Component {
                         &lt;IGearInput value=&quot;&quot; label=&quot;text input&quot;/&gt;
                         &lt;IGearInput value=&quot;Sampo Kivist&#246;&quot; label=&quot;Author&quot;/&gt;
                         &lt;IGearInput type=&quot;password&quot; value=&quot;&quot; label=&quot;password input&quot;/&gt;
-                        &lt;IGearInput label=&quot;disabled input&quot; disabled /&gt;
+                        &lt;IGearInput label=&quot;disabled input&quot; disabled=&#123;true} /&gt;
                     </CodeBlock>
                 </div>
 
@@ -60,6 +74,18 @@ export class InputPage extends Component {
                     </div>
                     <CodeBlock className="xml">
                         &lt;IGearInput errorMessage=&quot;There is something wrong!&quot; label=&quot;This input has error&quot; /&gt;
+                    </CodeBlock>
+                </div>
+
+                <div class="code-example">
+                    <span class="description">Input events, onChange and onKeyUp.</span>
+                    <div class="example">
+                        <IGearInput label="I will raise events" onChange={this.onInputChange} onKeyUp={this.onKeyUp} />
+                        <pre class="log" ref={this._demoChange} ></pre>
+                        <pre class="log" ref={this._demoKeyup} ></pre>
+                    </div>
+                    <CodeBlock className="xml">
+                        TODO: (cant add example now due to issues with formatting)
                     </CodeBlock>
                 </div>
 
