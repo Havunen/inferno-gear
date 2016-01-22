@@ -41,8 +41,6 @@ export default {
             browser: true
         }),
         commonjs({
-            include: 'node_modules/highlight.js/**',
-
             // search for files other than .js files (must already
             // be transpiled by a previous plugin!)
             extensions: [ '.js', '.coffee' ] // defaults to [ '.js' ]
