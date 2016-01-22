@@ -1,4 +1,4 @@
-import {Inferno, Component, InfernoDOM, childrenTemplate} from './../../lib/infernowrapper';
+import {Inferno, Component, InfernoDOM, childrenTemplate} from './../../../lib/infernowrapper';
 import hljs from 'highlight.js';
 
 export class CodeBlock extends Component {

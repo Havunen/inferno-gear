@@ -1,6 +1,6 @@
 import {Inferno, Component} from './../../../lib/infernowrapper'
 import {IGearInput} from './../../../lib/index';
-import {CodeBlock} from './../codeblock';
+import {CodeBlock} from './../components/codeblock';
 
 export class InputPage extends Component {
     constructor(props) {
