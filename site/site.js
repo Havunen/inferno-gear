@@ -5,43 +5,21 @@ import {Page} from './views/page';
 InfernoDOM.render(<Header />, document.getElementById('header'));
 InfernoDOM.render(<Page />, document.getElementById('content'));
 
-
-//class BuggyRender extends Component {
+//
+//
+//class StyleIssue extends Component {
 //    constructor(props) {
 //        super(props);
-//
-//        this.state = {
-//            empty: true
-//        };
-//
-//        this.toggle = this.toggle.bind(this);
-//    }
-//
-//    toggle() {
-//        this.setState({
-//            empty: !this.state.empty
-//        });
 //    }
 //
 //    render() {
 //        return (
 //            <div>
-//                <button onClick={this.toggle}>Empty</button>
-//                <ul>
-//                    {(() => {
-//                        if (this.state.empty === true) {
-//                            return <li>No cars!</li>
-//                        } else {
-//                            return ['BMW', 'Volvo', 'Saab'].map(function(car) {
-//                                return <li>{car}</li>;
-//                            });
-//                        }
-//                    })()}
-//                </ul>
+//                <div style={{'display': 'block'}}>Hi, I'm red</div>
 //            </div>
 //        )
 //    }
 //}
 //
 //
-//InfernoDOM.render(<BuggyRender />, document.body);
+//InfernoDOM.render(<StyleIssue />, document.body);
