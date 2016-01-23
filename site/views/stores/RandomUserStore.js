@@ -1,28 +1,35 @@
-import {Store} from 'flux/utils.js';
-import Dispatcher from './../dispatcher/AppDispatcher';
-import EventEmitter from 'events';
+import {BaseStore} from './BaseStore';
+import {DropdownActions} from './../actions/DropdownActions';
 
 const randomUserApi = 'https://randomuser.me/api/';
 
-
 // Simple Service
-function getRandomUsers(count) {
-    return window.fetch(randomUserApi + '?results=' + count, {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
+const getRandomUsers = function(count, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", randomUserApi +  '?results=' + count, true);
+    xhr.onload = function (e) {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                callback(xhr.responseText);
+            } else {
+                console.error(xhr.statusText);
+            }
+
         }
-    })
-}
+    };
+    xhr.onerror = function (e) {
+        console.error(xhr.statusText);
+    };
+    xhr.send(null);
+};
 
 
 
 // Store
 
-export default new class extends EventEmitter {
+class Store extends BaseStore {
     constructor() {
-        super(Dispatcher);
+        super();
 
         this.datasource = null;
         this.loading = false;
@@ -30,17 +37,44 @@ export default new class extends EventEmitter {
         this.getData = this.getData.bind(this);
     }
 
+    handleAction(action) {
+        switch(action.type) {
+            case DropdownActions.selectPerson:
+                console.log("SELECT");
+                break;
+            default:
+                // Do nothing
+                break;
+        }
+    }
+
     getData() {
+        if (this.loading === true) {
+            return;
+        }
         // fetching
         this.loading = true;
-        this.__emitChange();
+        getRandomUsers(10, (response) => {
+            let json = JSON.parse(response);
 
-        getRandomUsers(10).then((response) =>  {
-            return response.json().then((json) => {
-                this.loading = false;
-                this.datasource.push(json.results);
-                this.__emitChange();
-            });
-        })
+            if (this.datasource === null) {
+                this.datasource = [];
+            }
+
+            this.loading = false;
+            this.datasource.push(...json.results);
+            this.emitChange();
+        });
+        //getRandomUsers(10).then(function (response) {
+        //    return response.json()
+        //}).then((json) => {
+        //    this.loading = false;
+        //    this.datasource.push(json.results);
+        //    this.emitChange();
+        //}).catch(function(ex) {
+        //    console.log("JSON parsing failed", ex);
+        //})
     }
-};
+}
+
+export const RandomUserStore = new Store();

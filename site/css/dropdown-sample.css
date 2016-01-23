@@ -1,21 +1,36 @@
-.sample {
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: .25rem;
+.user-sample {
+    display: flex;
+    flex-direction: row;
     cursor: pointer;
-    background: blue;
-    width: 100%;
+    min-width: 15rem;
+}
+.user-sample:hover {
+    background: #CDE6FB;
+}
+img.user-sample-pic {
+    border-radius: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: .25rem;
+    flex: 0 0 2.5rem;
 }
 
-.igear-dditem > .sample {
-    width: 100%;
-    box-shadow: 0 1px 1px #000;
+.user-sample-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    padding-left: .5rem;
 }
 
-.igear-dditem > .sample:hover {
-    background: red;
+span.user-sample-title {
+    /* display: block; */
+    font-size: .85rem;
+    height: .85rem;
+    color: #275884;
+    text-transform: capitalize;
 }
 
-.igear-selected > .sample {
-    text-decoration: underline;
+span.user-sample-name {
+    text-transform: capitalize;
 }
