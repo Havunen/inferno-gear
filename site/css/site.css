@@ -184,3 +184,11 @@ pre.log {
     background: #E2E2E2;
     margin: 1rem 0;
 }
+
+.properties-table > thead td {
+    font-weight: bold;
+}
+.properties-table td {
+    padding: .25rem;
+    border: 1px solid #ddd;
+}

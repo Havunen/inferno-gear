@@ -101,10 +101,58 @@ export class InputPage extends Component {
                             </tr>
                         </thead>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>onChange</td>
+                            <td>function</td>
+                            <td>-</td>
+                            <td>Occurs when value is changed</td>
+                        </tr>
+                        <tr>
+                            <td>onKeyUp</td>
+                            <td>function</td>
+                            <td>-</td>
+                            <td>Occurs when keyboard button is released.</td>
+                        </tr>
+                        <tr>
+                            <td>value</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>Preselected value</td>
+                        </tr>
+                        <tr>
+                            <td>label</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>Animated label for input</td>
+                        </tr>
+                        <tr>
+                            <td>placeholder</td>
+                            <td>String</td>
+                            <td>-</td>
+                            <td>Watermark text for input field.</td>
+                        </tr>
+                        <tr>
+                            <td>floatingLabel</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                            <td>Forces label to float</td>
+                        </tr>
+                        <tr>
+                            <td>disabled</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                            <td>Disables the input field.</td>
+                        </tr>
+                        <tr>
+                            <td>charCounter</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                            <td>Show character counter below input.</td>
+                        </tr>
+                        <tr>
+                            <td>maxLength</td>
+                            <td>Number</td>
+                            <td>-</td>
+                            <td>Maximum length for input field. Can be used together with charCounter.</td>
                         </tr>
                     </table>
                 </div>

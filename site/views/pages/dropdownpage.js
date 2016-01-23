@@ -13,6 +13,15 @@ const customLayout = (obj) =>
     </div>
 </div>;
 
+const customFilter = function(items, searchText) {
+    return items.filter(function(obj) {
+        return (searchText.length == 0 ||
+        obj.user.name.first.toString()
+            .toLowerCase()
+            .indexOf(searchText.toString().toLowerCase()) > -1);
+    });
+};
+
 export class DropdownPage extends Component {
     constructor(props) {
         super(props);
@@ -42,6 +51,8 @@ export class DropdownPage extends Component {
     }
 
     render() {
+        console.log(customFilter);
+
         return (
             <div>
                 <h2 class="separator"><span class="h2text">Dropdown</span></h2>
@@ -58,9 +69,10 @@ export class DropdownPage extends Component {
 
 
                 <div class="code-example">
-                    <span class="description">Dropdown can render custom item layout, get data using ajax and have custom filtering.</span>
+                    <span class="description">Dropdown can render custom item layout, get data using ajax and have custom filtering.<br />
+                    Following example uses people layout and filters using first name only.</span>
                     <div class="example">
-                        <IGearDropDown items={this.state.randomPersons} source={RandomUserStore.getData} itemLayout={customLayout} label="People dropdown" />
+                        <IGearDropDown test="jaska" filter={customFilter} items={this.state.randomPersons} source={RandomUserStore.getData} itemLayout={customLayout} label="People dropdown" />
                     </div>
                     <CodeBlock className="xml">
                     </CodeBlock>
