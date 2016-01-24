@@ -1,5 +1,8 @@
 .igear-calendar {
     display: inline-block;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: .25rem;
 }
 
 .igear-row {
@@ -8,18 +11,47 @@
 
 .igear-cell {
     display: flex;
-    padding: .5rem;
     text-align: center;
     flex: 1;
+    width: 1.5rem;
     justify-content: center;
+    height: 1.5rem;
+    align-content: flex-start;
+    border-radius: 100%;
+    padding: 1.25rem;
+    margin: .25rem;
+    align-items: center;
+    border: 2px solid #fff;
 }
-
-.week.igear-cell {
-    color: #275884;
-    border-right: 1px solid #275884;
+/* Todo: simplify this selector if possible, add extra class to handle it? */
+.igear-row:not(.header) > .igear-cell:not(.week):hover {
+    background: #ddd;
+    cursor: pointer;
 }
 
 .header.igear-row {
     color: #275884;
     border-bottom: 1px solid #275884;
+}
+
+.igear-cell.today {
+    border: 2px solid #275884;
+}
+
+.igear-cell.week {
+    box-shadow: 1px 0px #275884;
+    border-radius: 0;
+    padding: 1.5rem;
+    margin: 0;
+}
+
+.header > .igear-cell.week {
+    box-shadow: 1px 1px #275884;
+}
+
+.out.igear-cell {
+    color: #999;
+}
+.selected.igear-cell {
+    background: #97CAF7;
 }
