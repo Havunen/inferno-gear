@@ -34,10 +34,6 @@ export class InputPage extends Component {
                         <IGearInput label="disabled input" disabled={true} />
                     </div>
                     <CodeBlock className="xml">
-                        &lt;IGearInput value=&quot;&quot; label=&quot;text input&quot;/&gt;
-                        &lt;IGearInput value=&quot;Sampo Kivist&#246;&quot; label=&quot;Author&quot;/&gt;
-                        &lt;IGearInput type=&quot;password&quot; value=&quot;&quot; label=&quot;password input&quot;/&gt;
-                        &lt;IGearInput label=&quot;disabled input&quot; disabled=&#123;true} /&gt;
                     </CodeBlock>
                 </div>
 
@@ -48,8 +44,6 @@ export class InputPage extends Component {
                         <IGearInput charCounter={true} maxLength={10} label="Input with at most 10 characters" />
                     </div>
                     <CodeBlock className="xml">
-                        &lt;IGearInput charCounter=&#123;true} label=&quot;Simple character counter&quot; /&gt;
-                        &lt;IGearInput charCounter=&#123;true} maxLength=&#123;10} label=&quot;Input with at most 10 characters&quot; /&gt;
                     </CodeBlock>
                 </div>
 
@@ -61,9 +55,6 @@ export class InputPage extends Component {
                         <IGearInput placeholder="placeholder text" label="Placeholder & label. Label is forced to float" />
                     </div>
                     <CodeBlock className="xml">
-                        &lt;IGearInput floatingLabel=&#123;true} label=&quot;This label is always floating&quot; /&gt;
-                        &lt;IGearInput placeholder=&quot;This label never floats&quot; /&gt;
-                        &lt;IGearInput placeholder=&quot;placeholder text&quot; label=&quot;Placeholder &amp; label. Label is forced to float&quot; /&gt;
                     </CodeBlock>
                 </div>
 
@@ -73,7 +64,6 @@ export class InputPage extends Component {
                         <IGearInput errorMessage="There is something wrong!" label="This input has error" />
                     </div>
                     <CodeBlock className="xml">
-                        &lt;IGearInput errorMessage=&quot;There is something wrong!&quot; label=&quot;This input has error&quot; /&gt;
                     </CodeBlock>
                 </div>
 
@@ -81,11 +71,10 @@ export class InputPage extends Component {
                     <span class="description">Input events, onChange and onKeyUp.</span>
                     <div class="example">
                         <IGearInput label="I will raise events" onChange={this.onInputChange} onKeyUp={this.onKeyUp} />
-                        <pre class="log" ref={this._demoChange} ></pre>
-                        <pre class="log" ref={this._demoKeyup} ></pre>
+                        <pre class="log" ref={this._demoChange}></pre>
+                        <pre class="log" ref={this._demoKeyup}></pre>
                     </div>
                     <CodeBlock className="xml">
-                        TODO: (cant add example now due to issues with formatting)
                     </CodeBlock>
                 </div>
 

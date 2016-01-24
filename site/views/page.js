@@ -2,6 +2,7 @@ import {Inferno, Component} from './../../lib/infernowrapper';
 import {InputPage} from './pages/inputpage';
 import {DropdownPage} from './pages/dropdownpage';
 import {AvatarPage} from './pages/avatarpage';
+import {CalendarPage} from './pages/calendarpage';
 
 export class Page extends Component {
     constructor(props) {
@@ -14,6 +15,7 @@ export class Page extends Component {
                 <InputPage />
                 <DropdownPage />
                 <AvatarPage />
+                <CalendarPage />
             </div>
         )
     }

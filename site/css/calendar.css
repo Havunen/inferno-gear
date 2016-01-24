@@ -1,0 +1,25 @@
+.igear-calendar {
+    display: inline-block;
+}
+
+.igear-row {
+    display: flex;
+}
+
+.igear-cell {
+    display: flex;
+    padding: .5rem;
+    text-align: center;
+    flex: 1;
+    justify-content: center;
+}
+
+.week.igear-cell {
+    color: #275884;
+    border-right: 1px solid #275884;
+}
+
+.header.igear-row {
+    color: #275884;
+    border-bottom: 1px solid #275884;
+}

@@ -5,8 +5,8 @@ import {Page} from './views/page';
 InfernoDOM.render(<Header />, document.getElementById('header'));
 InfernoDOM.render(<Page />, document.getElementById('content'));
 
-//
-//
+
+
 //class StyleIssue extends Component {
 //    constructor(props) {
 //        super(props);
@@ -20,6 +20,6 @@ InfernoDOM.render(<Page />, document.getElementById('content'));
 //        )
 //    }
 //}
-//
-//
+
+
 //InfernoDOM.render(<StyleIssue />, document.body);
