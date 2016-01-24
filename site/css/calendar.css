@@ -12,12 +12,12 @@
 .igear-cell {
     display: flex;
     text-align: center;
-    flex: 1;
+    flex: 1 1 auto;
     width: 1.5rem;
     justify-content: center;
     height: 1.5rem;
     align-content: flex-start;
-    border-radius: 100%;
+    border-radius: 50%;
     padding: 1.25rem;
     margin: .25rem;
     align-items: center;
@@ -31,7 +31,6 @@
 
 .header.igear-row {
     color: #275884;
-    border-bottom: 1px solid #275884;
 }
 
 .igear-cell.today {
@@ -39,14 +38,10 @@
 }
 
 .igear-cell.week {
-    box-shadow: 1px 0px #275884;
+    box-shadow: 1px 0 #275884;
     border-radius: 0;
     padding: 1.5rem;
     margin: 0;
-}
-
-.header > .igear-cell.week {
-    box-shadow: 1px 1px #275884;
 }
 
 .out.igear-cell {
@@ -55,3 +50,133 @@
 .selected.igear-cell {
     background: #97CAF7;
 }
+
+.igear-calendar-day {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 2rem;
+    align-items: center;
+    color: #fff;
+}
+
+.igear-calendar-date {
+    height: 3rem;
+    color: #fff;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.igear-calendar-header {
+    background: #275884;
+    font-weight: bold;
+}
+
+.igear-calendar-date > span {
+    margin: 0 .25rem;
+    text-transform: uppercase;
+    width: 5rem;
+    text-align: center;
+}
+
+
+.igear-calendar-select {
+    padding: 0 .5rem 0 .8rem;
+    font-size: 1.5rem;
+    border: none;
+    outline: 0;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none no-repeat #275884;
+    cursor: pointer;
+}
+.igear-calendar-select:hover {
+    border-color: #275884;
+    color: #275884;
+    background-color: #fff
+}
+.igear-calendar-select > option {
+    text-align: center;
+    color: #275884;
+    background-color: #fff
+}
+
+/*target Internet Explorer 9 and Internet Explorer 10:*/
+@media screen and (min-width:0\0) {
+    select {
+        background:none;
+        background-color: #275884;
+        padding: 5px;
+    }
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    border-color: #275884;
+    background: #fff;
+}
+
+.left-arrow:hover:after,
+.right-arrow:hover:after {
+    border-color: #275884;
+}
+
+.left-arrow {
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    margin-right: auto;
+    margin-left: .25rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.left-arrow:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: .45em;
+    left: .45em;
+    width: .6em;
+    height: .6em;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    -moz-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+.right-arrow {
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: .25rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.right-arrow:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: .45em;
+    left: .4em;
+    width: .6em;
+    height: .6em;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+}
+
