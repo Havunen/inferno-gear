@@ -5,13 +5,13 @@ import {Page} from './views/page';
 InfernoDOM.render(<Header />, document.getElementById('header'));
 InfernoDOM.render(<Page />, document.getElementById('content'));
 
-//
+
 //class ChangeChildrenCount extends Component {
 //    constructor(props) {
 //        super(props);
 //
 //        this.state = {
-//            list: ['1', '2', '3', '4']
+//            list: ['1']
 //        };
 //
 //        // Bindings
@@ -20,7 +20,7 @@ InfernoDOM.render(<Page />, document.getElementById('content'));
 //
 //    handleClick() {
 //        this.setState({
-//            list: ['1']
+//            list: ['1',  '2', '3', '4']
 //        });
 //    }
 //
@@ -29,7 +29,7 @@ InfernoDOM.render(<Page />, document.getElementById('content'));
 //            <div>
 //                <button onClick={this.handleClick}>1</button>
 //                {this.state.list.map(function (x, i) {
-//                    return <div>{i}</div>
+//                    return <div key={i}>{i}</div>
 //                })}
 //            </div>
 //        );
@@ -38,3 +38,5 @@ InfernoDOM.render(<Page />, document.getElementById('content'));
 //
 //
 //InfernoDOM.render(<ChangeChildrenCount />, document.body);
+//
+

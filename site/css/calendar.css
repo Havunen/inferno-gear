@@ -3,6 +3,8 @@
     background: #fff;
     border: 1px solid #ddd;
     border-radius: .25rem;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .igear-row {
@@ -23,8 +25,9 @@
     align-items: center;
     border: 2px solid #fff;
 }
+
 /* Todo: simplify this selector if possible, add extra class to handle it? */
-.igear-row:not(.header) > .igear-cell:not(.week):hover {
+.no-touch .igear-row:not(.header) > .igear-cell:not(.week):hover {
     background: #ddd;
     cursor: pointer;
 }
@@ -38,10 +41,11 @@
 }
 
 .igear-cell.week {
-    box-shadow: 1px 0 #275884;
+    background: #E6EDF3;
     border-radius: 0;
     padding: 1.5rem;
     margin: 0;
+    border-color: #E6EDF3;
 }
 
 .out.igear-cell {

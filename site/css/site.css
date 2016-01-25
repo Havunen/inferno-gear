@@ -2,6 +2,8 @@ html {
     box-sizing: border-box;
     background-color: #f8f8f8;
     font-family: 'PT Sans', sans-serif;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
 }
 
 *, *:after, *:before {
