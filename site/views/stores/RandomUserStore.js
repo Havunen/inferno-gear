@@ -40,7 +40,6 @@ class Store extends BaseStore {
     handleAction(action) {
         switch(action.type) {
             case DropdownActions.selectPerson:
-                console.log("SELECT");
                 break;
             default:
                 // Do nothing

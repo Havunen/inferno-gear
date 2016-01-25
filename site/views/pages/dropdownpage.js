@@ -39,7 +39,6 @@ export class DropdownPage extends Component {
         this.setState({
             randomPersons: RandomUserStore.datasource
         });
-        console.log("UPDATE FROM STORE");
     }
 
     componentWillMount() {
@@ -51,8 +50,6 @@ export class DropdownPage extends Component {
     }
 
     render() {
-        console.log(customFilter);
-
         return (
             <div>
                 <h2 class="separator"><span class="h2text">Dropdown</span></h2>
@@ -66,7 +63,6 @@ export class DropdownPage extends Component {
                     <CodeBlock className="xml">
                     </CodeBlock>
                 </div>
-
 
                 <div class="code-example">
                     <span class="description">Dropdown can render custom item layout, get data using ajax and have custom filtering.<br />
