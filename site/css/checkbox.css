@@ -1,0 +1,39 @@
+.igear-tgl {
+    position: relative;
+    font-family: Arial, sans-serif;
+    line-height: 135%;
+    cursor: pointer;
+
+}
+
+.igear-chbx {
+    position: relative;
+    cursor: pointer;
+}
+.igear-chbx:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 1rem;
+    height: 1rem;
+}
+.igear-chbx:checked:before {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    height: .5rem;
+    border-bottom: 3px solid #275884;
+    border-left: 3px solid #275884;
+
+}
+.igear-chbx:after {
+    content: "";
+    position: absolute;
+    top: -0.125rem;
+    left: 0;
+    width: 1.1rem;
+    height: 1.1rem;
+    background: #fff;
+    cursor: pointer;
+    border: 1px solid #999;
+}
