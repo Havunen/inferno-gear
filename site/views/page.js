@@ -3,6 +3,7 @@ import {InputPage} from './pages/inputpage';
 import {DropdownPage} from './pages/dropdownpage';
 import {AvatarPage} from './pages/avatarpage';
 import {CalendarPage} from './pages/calendarpage';
+import {CheckboxPage} from './pages/checkboxpage';
 
 function is_touch_device() {
     return (('ontouchstart' in window)
@@ -26,6 +27,7 @@ export class Page extends Component {
                 <DropdownPage />
                 <AvatarPage />
                 <CalendarPage />
+                <CheckboxPage />
             </div>
         )
     }

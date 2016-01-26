@@ -32,7 +32,7 @@
   "homepage": "https://github.com/Havunen/inferno-gear#readme",
   "dependencies": {
     "events": "^1.1.0",
-    "inferno-src": "https://github.com/trueadm/inferno.git#dev",
+    "inferno-src": "https://github.com/trueadm/inferno.git",
     "moment": "^2.11.1"
   },
   "devDependencies": {
