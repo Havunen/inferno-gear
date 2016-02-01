@@ -40,9 +40,7 @@ InfernoDOM.render(<Page />, document.getElementById('content'));
 //InfernoDOM.render(<ChangeChildrenCount />, document.body);
 //
 
-
-
-// BUG? ???
+//
 //const StatelessComponent = ({value}) => (
 //    <p>{value}</p>
 //);
@@ -52,7 +50,12 @@ InfernoDOM.render(<Page />, document.getElementById('content'));
 //        super(props);
 //
 //        this.state = {
-//            counter: 0
+//            obj: {
+//                count: 0
+//            },
+//            obj2: {
+//                test: 0
+//            }
 //        };
 //
 //        this._onClick = this._onClick.bind(this);
@@ -60,47 +63,84 @@ InfernoDOM.render(<Page />, document.getElementById('content'));
 //
 //    _onClick() {
 //        this.setState({
-//            counter: ++this.state.counter
+//           obj: {
+//             count: 1
+//           }
 //        });
 //    }
 //
 //    render() {
 //        return (
 //            <div>
-//                <button onClick={this._onClick}>Increase! {this.state.counter}</button>
-//                <StatelessComponent value={this.state.counter} />
+//                <button onClick={this._onClick}></button>
+//                <ul>
+//                    {this.state.obj.count}
+//                </ul>
 //            </div>
 //        )
 //    }
 //}
 //
+//InfernoDOM.render(<First name="John" />, document.getElementById('first'));
+//InfernoDOM.render(<First name="Peter" />, document.getElementById('second'));
+
+//var div = document.getElementById('first');
 //
-//class Second extends Component {
+//class Com3 extends Component {
 //    constructor(props) {
 //        super(props);
-//
-//        this.state = {
-//            counter: 0
-//        };
-//
-//        this._onClick = this._onClick.bind(this);
 //    }
 //
-//    _onClick() {
-//        this.setState({
-//            counter: ++this.state.counter
-//        });
+//    componentWillUnmount() {
+//        console.log("COM3");
 //    }
 //
 //    render() {
 //        return (
 //            <div>
-//                <button onClick={this._onClick}>Increase! {this.state.counter}</button>
-//                <StatelessComponent value={this.state.counter} />
 //            </div>
-//        )
+//        );
 //    }
 //}
 //
-//InfernoDOM.render(<First />, document.getElementById('header'));
-//InfernoDOM.render(<Second />, document.getElementById('content'));
+//class Com2 extends Component {
+//    constructor(props) {
+//        super(props);
+//    }
+//
+//    componentWillUnmount() {
+//        console.log("COM2");
+//    }
+//
+//    render() {
+//        return (
+//            <div>
+//                <Com3 />
+//            </div>
+//        );
+//    }
+//}
+//
+//class Com1 extends Component {
+//    constructor(props) {
+//        super(props);
+//    }
+//
+//    componentWillUnmount() {
+//        console.log("Com1");
+//    }
+//
+//    render() {
+//        return (
+//            <div>
+//                <Com2 />
+//            </div>
+//        );
+//    }
+//}
+//
+//InfernoDOM.render(<Com1 />, div);
+//
+//setTimeout(function() {
+//    InfernoDOM.render(<Com2 />, div);
+//}, 1600);
